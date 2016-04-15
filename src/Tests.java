@@ -9,7 +9,7 @@ import java.util.*;
  * Please note: This will fill out the terminal with a lot of data as it just runs the tests all at once.
  * To see earlier tests please just scroll up to see them.
  *
- * Tests: (BRIEF, please refer to function headers for more detailed information!)
+ * Tests: (BRIEF, please refer to java docs or the function headers for more detailed information!)
  *    1: Basic Test that checks corner cases out.
  *    2: Test that checks the values of merging two heaps.
  *    3: Run the PairingHeap against the Built in Java "PriorityQueue" class. Compares values.
@@ -17,7 +17,7 @@ import java.util.*;
  *    5: Compare run times between built in Priority Queue and the Pairing Heap.
  *    6: Dijkstra's Algorithm
  */
-public class Main {
+public class Tests {
     public static void main(String args[]){
         //Basic test of staple input values being inserted into the PairingHeap and then the iterative
         //removal of the values. Here I try and probe corner cases!
@@ -46,7 +46,6 @@ public class Main {
         System.out.println("Thanks for running the tests :)!  (Sorry about the terminal flood...) ");
         System.out.println("If any tests didn't make sense, please refer to javadocs, README or comment headers!");
     }
-
 
     /**
      * Evokes a basic test on the PairingHeap where I attempt to probe corner cases.
@@ -115,7 +114,6 @@ public class Main {
             System.out.println(delMinNode.getPayload());
         }
     }
-
 
     /**
      * Create two individual pairing heaps, merge them and then show their contents.
@@ -204,10 +202,8 @@ public class Main {
         pairingHeap.insert(nodeZero);
         builtInHeap.add(0);
 
-
         System.out.println("Built in heap value: " + builtInHeap.remove());
         System.out.println("Pairing heap value : " + pairingHeap.deleteMin().getPayload());
-
 
         //Add MAXINT value to each
         //Add 1699 to each
@@ -297,7 +293,6 @@ public class Main {
         Comparator<Integer> comparator = new SimpleIntComparator(); //In another file, basic java comparator class.
         PriorityQueue<Integer> builtInHeap = new PriorityQueue<Integer>(1000, comparator);
 
-
         //Standard way of generating a random number in java.     Author: Scary Wombat
         //Source: http://stackoverflow.com/questions/20389890/generating-a-random-number-between-1-and-10-java
         Random rand = new Random();
@@ -308,8 +303,6 @@ public class Main {
             Node node = new Node(randomInt, "notUsedHere");
             pairingHeap.insert(node);
             builtInHeap.add(randomInt);
-
-
         }
 
         System.out.println("Display the results of removing the minimum element from each 10 times");
@@ -319,7 +312,6 @@ public class Main {
             System.out.println("Built in heap value " + i + " : " + builtInHeap.remove());
             System.out.println("Pairing heap value  " + i + " : " + pairingHeap.deleteMin().getValue());
         }
-
     }
 
     /**
@@ -336,7 +328,6 @@ public class Main {
      * Objects.
      */
     public static void compareRunTimes(){
-
         System.out.println();
         System.out.println("******TEST 5: Compare Running times! ");
 
@@ -385,7 +376,6 @@ public class Main {
         for(int i = 0; i< nodeList.size(); i++){
             builtInHeap.add(intList.get(i));
         }
-
         for(int i = 0; i < 5000; i++){
             builtInHeap.remove();
         }
@@ -393,14 +383,12 @@ public class Main {
         //Display built in heap value 4999.
         System.out.println(builtInHeap.remove());
 
-
         //Get time values for each.
         long endPairingHeapTime = System.nanoTime();
         long durationPairingHeap = (endPairingHeapTime - startPairingHeapTime);
 
         long endBuiltInTime = System.nanoTime();
         long durationBuiltIn = (endBuiltInTime - startBuiltInTime);
-
 
         //Output results to the terminal.
         System.out.println("How long each took to run:");
@@ -516,25 +504,25 @@ public class Main {
                 distances.put(entry.getKey(),0);
                 pairingHeap.insert(new Node(0,entry.getKey()));
             }
+            //All other nodes aren't visited yet, and their distance (for now) is max int.
             else{
                 visited.put(entry.getKey(), false);
                 distances.put(entry.getKey(), Integer.MAX_VALUE);
             }
         }
 
-
-
+        //While the pairing heap has a node, continue processing.
         while(pairingHeap.getSize() > 0){
+            //Get the smallest node.
             Node chosenNode = pairingHeap.deleteMin();
 
+            //If it isn't already marked as visited, mark it now.
             if(!visited.get(chosenNode.getPayload())){
                 visited.put(chosenNode.getPayload(), true);
             }
 
-
+            //For each neighbour of the chosen node, process it!
             for(String neighbour: adjList.get(chosenNode.getPayload())){
-
-                int currentDistance = distances.get(neighbour);
                 int lengthOfEdge = lengths.get(chosenNode.getPayload() + neighbour);
 
                 //Now compare distances, and if the distance is improved then replace the old distance.
@@ -560,9 +548,6 @@ public class Main {
                 "     *  Magical Portal = 35");
     }
 
-
-
-
     /**
      * Evokes the method to delete the minimum value from the heap until the size of the heap is 0.
      * This will also display the results of each minimum value that was in the heap as it proceeds.
@@ -574,6 +559,7 @@ public class Main {
      * @param pairingHeap Takes in a PairingHeap that it will display the contents of.
      **/
     public static void displayHeap(PairingHeap pairingHeap){
+        //Until the pairing heap is empty, continue printing!
         while (pairingHeap.getSize() > 0){
             Node delMinNode = pairingHeap.deleteMin();
             System.out.println(delMinNode.getPayload());

@@ -1,0 +1,190 @@
+    Brief:
+    This is an implementation of a Pairing Heap, a data structure that yields a very quick priority queue
+    for use across various algorithms such as Dijkstra's for finding the shortest path in a graph. However
+    heaps have found use across other algorithms such as Prim's, heapsort and order statistics to name a few. One
+    of the key benefits of using pairing heaps over other heaps such as fibbonaci heaps is the relatively
+    straight-forward implementation of the algorithm.
+
+
+   Running Time:
+   Note: My implementation uses Object Oriented programming styles, so it is expected that the complexities may run
+   slower than expected.
+
+   The typical terminology of the function will proceed the complexity and a brief description of the complexity.
+   The function name implemented will be in brackets.
+
+       1: findmin + deletemin (getMin): O(1)
+             As the minimum value is maintained by the Pairing Heap Object and simply returned.
+             In my implementation I decided for my purposes it would be easier to implement these two functions
+             as a single function. While I could merely delete the value-- for my purposes I always wanted the value
+             returned. Separation of the functions is extremely straight forward and does not change the complexity.
+
+       2: merge (merge): O(1)
+             When merging, I used the OO pattern and so I took the liberty to reduce the pairing heap down to it's root
+             node, when merging the process is quite simple-- Compare the two nodes and the smaller node will become
+             a child of the larger node. Merely inserting the smaller "pairing heap" as the subtree of the other,
+             yielding the traditional merging of Pairing Heaps. Due to the fact this is a basic comparison of two values
+             and appending to the end of an array, the complexity is O(1).
+
+       3: insert (insert) O(1)
+             This function is described as making a brand new Pairing Heap (with a size of 1) with the new node to
+             be added to the main Pairing Heap. Then invoking the merge function upon the two heaps.
+             My implementation follows that specification exactly, however yet again I have taken the liberty to
+             address the pairing heaps by their root nodes.
+             When inserting a value, I take the new "inserted" node and compare it to the main Pairing Heap's node,
+             and make the larger value a child of the smaller value-- using the merge function exactly as defined.
+             Since this hinges on the merge function, with a complexity of O(1), the complexity here is also O(1).
+
+       4: decrease key -- Not implemented
+             This function was not useful for my implementation and therefore not added.
+
+
+   Tests:
+   For this Pairing Heap implementation I chose to do a variety of tests, detailed information on them can be
+   found in the javadocs as well as in the source code files-- where I went into rather... lengthy detail on the tests
+   and what they are meant to show.
+
+       1: How to run them:
+            There is a Tests.Java file here, run that file and it should dump a large volume of data
+            onto the terminal screen. This data is the tests, and the results of the tests. Reading over the tests
+            and their data will tell you of this implementation's strength.
+
+       2: How to interptet them:
+            There is a lot of text dumped into the terminal, however with this text there are 6 sections representing
+            6 different major tests (I will list it in this readme below this). Merely read the text over and
+            check that everything matches what is expected!
+
+       3: What is being tested?
+
+             1: Basic Test that checks corner cases out.
+             2: Test that checks the values of merging two heaps.
+             3: Run the PairingHeap against the Built in Java "PriorityQueue" class. Compares values.
+             4: Large data input into PairingHeap and Java built in "PriorityQueue". Displays first 5 minimum values from each.
+             5: Compare run times between built in Priority Queue and the Pairing Heap.
+             6: Dijkstra's Algorithm
+
+
+       4: Details on the tests:
+
+
+             1: The basic test + corner cases:
+             Evokes a basic test on the PairingHeap where I attempt to probe corner cases.
+                   Displays results in order of the node's value.
+
+                   Demonstrates:
+                     handles unordered input
+                     handles MAX_VALUE for Integers
+                     handles MIN_VALUE for Integers
+                     handles negative numbers
+                     handles 0
+                     handles input in random order.
+                     handles multiple instances of the same "value" of a node with different payloads.
+
+             2: The merging of heaps test:
+                   Create two individual pairing heaps, merge them and then show their contents.
+                   First off I will create two heaps, and then display their values individually.
+
+                   I will then populate the heaps again (displaying their values removes the values from the heap) with data
+                   and then will merge the heaps. Afterwards I will display the heap contents.
+
+             3: Running and comparing values against built in Java Priority Queue class.
+                   Using the build in Java Priority Queue implementation, I will insert into both the PairingHeap and the
+                   Java Priority Queue a series of values, I will then at whim get the minimum value from each and compare
+                   the values. Sometimes I remove values early, this is to test the resilience of the heap in spite of changes.
+
+                   This test will demonstrate the equal output from the Pairing Heap to the rigorously proven Java Priority Queue.
+
+             4: Stress test / Large load test:
+                   This is the stress test for the Pairing Heap and will be pitted against the typical Java Priority Queue.
+                   However I am intentionally making a fairly large loop and will be hurling values into these two data structures.
+
+                   Using the Java built in pseudorandom number generator to populate the data structures.
+
+                   Here I put in 100,000 values into the Pairing Heap and then 100,000 values into the java Priority Queue.
+                   The outputs that are paired should match.
+
+             5: Comparing run times between the Pairing Heap implementation and the built in Java Priority Queue
+                   This function will be obtaining the time and comparing the time that my Pairing Heap takes vs.
+                   the built in Java Priority Queue to insert 10,000 nodes and then get delete 5,000 of them.
+
+                   As an added bonus I will print the next value after that 5,000.
+
+                   Since my Pairing Heap is Object Orriented I am going to first create all of the Nodes first and keep them
+                   in an ArrayList of Node Objects. I will maintain an ArrayList of equivalent Integers and insert them into
+                   the Priority Queue from Java.
+
+                   So we instantly are incurring an O(n) cost, but this helps even out the playing field from creating Node
+                   Objects.
+
+             6: Dijkstra's algorithm (This will be long.)
+                  * This test runs Dijkstra's algorithm done by the Pairing Heap vs. Dijkstra's algorithm done by the
+                  * built in Java Priority Queue.
+                  *
+                  * Results should be the same.
+                  *
+                  * I will also be timing each.
+                  *
+                  * Dijkstra's algorithm here is following the CMPUT 204 slides from Martin Mueller's Lecture, 2015.
+                  * Note: I am using the version where instead of doing decrease key, I am instead putting the nodes back into the
+                  * heaps.
+                  *
+                  * Sort of a game...
+                  * "What is the shortest distance to each of these awesome locations from Main Street?"
+                  *
+                  * Node guide:
+                  *
+                  *  Node Key   ---- Location Name -----   Distances in Miles...? (units of distance arbitrary)
+                  *     1            Main Street             1 <-> 2 = 7
+                  *     2            Burberry Avenue         2 <-> 3 = 18
+                  *     3            Falcon Reach            3 <-> 4 = 49
+                  *     4            Mystical Forest         4 <-> 3 = 49
+                  *     5            Fairy River             5 <-> 1 = 29
+                  *     6            Dragon's Den            6 <-> 5 = 6
+                  *     7            Magical Portal          7 <-> 6 = 0   (So it is basically directly attached to Dragon's Den).
+                  *
+                  *  Expecting to start from Main Street the following values:
+                  *  MainStreet = 0
+                  *  Burberry avenue = 7
+                  *  Falcon Reach = 7+18 = 25
+                  *  Mystical Forest = 25 + 49 = 74
+                  *  Fairy River = 29
+                  *  Dragon's Den = 35
+                  *  Magical Portal = 35
+                  *
+
+
+
+
+
+    Other things I deem relevant:
+
+        1: Javadocs for the entire project are also with this-- located within the javadocs folder!
+             (They are probably far easier to read than going digging through my code...)
+
+             *Note: Some methods like my merge method aren't showing up in the javadocs. If something
+             appears to be missing please consult the source code. Not sure why this bug occurred.
+
+        2: Dijkstra's algorithm is implemented in a fashion where I do not use decrease key! This slows down the
+             implementation a little bit, as now instead of decreasing the key of an already existing node I am
+             now simply putting a brand new node in and getting rid of the other! I acknowledge this performence
+             penalty and am not going to hide it-- so I am stating it here.
+
+        3: I took the liberty of reducing "Pairing Heap merges" from merging an entire separate Pairing Heap Object
+             into the merge function focusing upon merging the ROOTS of what would otherwise be a Pairing Heap Object.
+             Meaning that I am following the specifications, however I personally don't want to bog down an
+             already slowed down OO implementation by creating superfluous objects that represent exactly what
+             I am already doing.
+
+
+    Resources used!:
+
+    1: https://en.wikipedia.org/wiki/Heap_(data_structure)
+    2: http://www.uqac.ca/azinflou/Fichiers840/pairing.pdf
+    3: https://en.wikipedia.org/wiki/Pairing_heap
+    4: https://www.cs.cmu.edu/~sleator/papers/pairing-heaps.pdf
+    5: Any technical details / java methods are cited in-line in the source code!
+
+
+
+
+
