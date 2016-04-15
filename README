@@ -2,7 +2,7 @@
     This is an implementation of a Pairing Heap, a data structure that yields a very quick priority queue
     for use across various algorithms such as Dijkstra's for finding the shortest path in a graph. However
     heaps have found use across other algorithms such as Prim's, heapsort and order statistics to name a few. One
-    of the key benefits of using pairing heaps over other heaps such as fibbonaci heaps is the relatively
+    of the key benefits of using pairing heaps over other heaps such as Fibonacci heaps is the relatively
     straight-forward implementation of the algorithm.
 
 
@@ -13,16 +13,14 @@
    The typical terminology of the function will proceed the complexity and a brief description of the complexity.
    The function name implemented will be in brackets.
 
-       1: findmin + deletemin (getMin): O(1)
+       1: find-min (findMin): O(1)
              As the minimum value is maintained by the Pairing Heap Object and simply returned.
-             In my implementation I decided for my purposes it would be easier to implement these two functions
-             as a single function. While I could merely delete the value-- for my purposes I always wanted the value
-             returned. Separation of the functions is extremely straight forward and does not change the complexity.
+             There is no processing or anything special needed, merely return the parameter of the Object.
 
        2: merge (merge): O(1)
              When merging, I used the OO pattern and so I took the liberty to reduce the pairing heap down to it's root
              node, when merging the process is quite simple-- Compare the two nodes and the smaller node will become
-             a child of the larger node. Merely inserting the smaller "pairing heap" as the subtree of the other,
+             a child of the larger node. Merely inserting the larger "pairing heap" as the subtree of the other,
              yielding the traditional merging of Pairing Heaps. Due to the fact this is a basic comparison of two values
              and appending to the end of an array, the complexity is O(1).
 
@@ -32,11 +30,26 @@
              My implementation follows that specification exactly, however yet again I have taken the liberty to
              address the pairing heaps by their root nodes.
              When inserting a value, I take the new "inserted" node and compare it to the main Pairing Heap's node,
-             and make the larger value a child of the smaller value-- using the merge function exactly as defined.
+             and make the larger value a subheap of the smaller value-- using the merge function exactly as defined.
              Since this hinges on the merge function, with a complexity of O(1), the complexity here is also O(1).
+             However since a new Node Object is created, that is unfortunately going to slow things down a bit.
 
        4: decrease key -- Not implemented
              This function was not useful for my implementation and therefore not added.
+
+       5: delete-min (deleteMinAlone): O(log n):
+             For delete-min, in my implementation why this has a complexity of O(log n) is because
+             when the root of the Pairing Heap is deleted I then need to merge subtrees! This involves me taking
+             all of the roots of the subtreets and placing them into a queue (a regular queue)! I constantly merge
+             the subtrees together until the size of the queue is 1 (A fully merged tree with a single root).
+             This merging process is what causes the time to be O(log n).
+
+       6: delete-min + return minimum (deleteMin): O(log n)
+             This function's complexity is essentially delete-min alone, as the find-min contribution to the complexity
+             is extremely small. Please refer to delete-min for the reasons of why the complexity is O(log n).
+             In my implementation I decided for my purposes it would be easier to implement these two functions
+             as a single function. While I could merely delete the value-- for my purposes I always wanted the value
+             returned. Separation of the functions is extremely straight forward and does not change the complexity.
 
 
    Tests:
@@ -49,7 +62,7 @@
             onto the terminal screen. This data is the tests, and the results of the tests. Reading over the tests
             and their data will tell you of this implementation's strength.
 
-       2: How to interptet them:
+       2: How to interpret them:
             There is a lot of text dumped into the terminal, however with this text there are 6 sections representing
             6 different major tests (I will list it in this readme below this). Merely read the text over and
             check that everything matches what is expected!

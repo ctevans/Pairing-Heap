@@ -181,6 +181,9 @@ public class Tests {
         System.out.println();
         System.out.println("******TEST 3: Run against Java Built In Heap! ");
         System.out.println("Check that the values output are paired and matching.");
+        System.out.println("Note in this test a lot of various values are put in and removed randomly.");
+        System.out.println("As in yes, the output will have -8 \"appear\" before -16 but that is because of how " +
+                "I put in the data not because of the heap!");
 
         //Create my pairingHeap first.
         PairingHeap pairingHeap = new PairingHeap();

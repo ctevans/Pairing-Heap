@@ -18,10 +18,10 @@ public class PairingHeap {
     }
 
     /**
-     * Returns the minimum node of the PairingHeap.
+     * Returns the minimum node of the PairingHeap. Does NOT delete it! Just returns it!
      * @return Node object representing the minimum node.
      */
-    public Node getMin(){
+    public Node findMin(){
         return minNode;
     }
 
@@ -84,6 +84,8 @@ public class PairingHeap {
 
     /**
      * Following the pairing heap guidelines, this function will remove the minimum node from the pairing heap.
+     * However this will also RETURN the node that was removed! So it is not a traditional "delete-min" function,
+     * for that function please refer to "deleteMinAlone" in the implementation!
      * Steps:
      * 1- Remove the minimum node (and return it), putting it into a temporary holder to return.
      * 2- I choose to follow the delection method on page 5 here involving creating a queue and iterating over it
@@ -101,14 +103,16 @@ public class PairingHeap {
             new Node(0,"dummynode");
         }
 
+        //Holds the minimum node that will be removed, it must be returned at the end.
+        Node tempHolder = this.minNode;
+
         //If the size is just 1 node, then just return the minimum node and don't do anything more.
         if(this.size==1){
             this.size--;
-            return this.minNode;
+            minNode = null; //remove the minimum node.
+            return tempHolder;
         }
 
-        //Holds the minimum node that will be removed, it must be returned at the end.
-        Node tempHolder = this.minNode;
 
         //For each child node of the current root, put it into a queue.
         ArrayList<Node> childQueue = new ArrayList<>();
@@ -130,6 +134,41 @@ public class PairingHeap {
         return tempHolder; //return the old root.
     }
 
+
+    /**
+     * In the Pairing Heap specification there is the "delete-min" function, however for this implementation
+     * I made it so that the function named "deleteMin" returned the value as well. However, I will have this function
+     * here which will merely delete the minimum node without returning any value.
+     */
+    public void deleteMinAlone(){
+        if(this.size==0){
+            System.out.println("Sorry, no more nodes!");
+        }
+
+        //If the size is just 1 node, just remove the minimum node and reduce size.
+        if(this.size==1){
+            this.size--;
+            minNode = null;
+        }
+
+        //For each child node of the current root, put it into a queue.
+        ArrayList<Node> childQueue = new ArrayList<>();
+        for(Node child: minNode.getChildList()){
+            childQueue.add(child);
+        }
+
+        //While the size of the queue, holding subtrees, is greater than 1-- continue to merge the subtrees.
+        while(childQueue.size() > 1){
+            Node subtreeRoot = merge(childQueue.get(0), childQueue.get(1));
+            childQueue.remove(0);
+            childQueue.remove(0);
+            childQueue.add(subtreeRoot);
+        }
+
+        //After merging of the subtrees is done, set the minimum node of the Pairing Heap to the root.
+        this.minNode = childQueue.get(0);
+        this.size--;
+    }
 
     /**
      * Pairing Heaps are traditionally about merging separate Pairing Heaps, but I took the route where I could

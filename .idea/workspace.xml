@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="3" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="0826f4d0-042f-4050-99d0-641a73c73f9d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/inputfile.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Pairing Heap 2/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testOutput.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Tests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pairing Heap 2/SimpleIntComparator.class" afterPath="$PROJECT_DIR$/out/production/Pairing Heap 2/SimpleIntComparator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pairing Heap 2/PairingHeap.class" afterPath="$PROJECT_DIR$/out/production/Pairing Heap 2/PairingHeap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pairing Heap 2/Tests.class" afterPath="$PROJECT_DIR$/out/production/Pairing Heap 2/Tests.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SimpleIntComparator.java" afterPath="$PROJECT_DIR$/src/SimpleIntComparator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Node.html" afterPath="$PROJECT_DIR$/javadocs/Node.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/PairingHeap.html" afterPath="$PROJECT_DIR$/javadocs/PairingHeap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/SimpleIntComparator.html" afterPath="$PROJECT_DIR$/javadocs/SimpleIntComparator.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/Tests.html" afterPath="$PROJECT_DIR$/javadocs/Tests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/allclasses-frame.html" afterPath="$PROJECT_DIR$/javadocs/allclasses-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/allclasses-noframe.html" afterPath="$PROJECT_DIR$/javadocs/allclasses-noframe.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/constant-values.html" afterPath="$PROJECT_DIR$/javadocs/constant-values.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/deprecated-list.html" afterPath="$PROJECT_DIR$/javadocs/deprecated-list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/help-doc.html" afterPath="$PROJECT_DIR$/javadocs/help-doc.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-1.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-10.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-10.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-11.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-11.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-12.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-12.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-2.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-3.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-4.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-5.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-6.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-6.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-7.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-7.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-8.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-8.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index-files/index-9.html" afterPath="$PROJECT_DIR$/javadocs/index-files/index-9.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/index.html" afterPath="$PROJECT_DIR$/javadocs/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/overview-tree.html" afterPath="$PROJECT_DIR$/javadocs/overview-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/package-frame.html" afterPath="$PROJECT_DIR$/javadocs/package-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/package-summary.html" afterPath="$PROJECT_DIR$/javadocs/package-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javadocs/package-tree.html" afterPath="$PROJECT_DIR$/javadocs/package-tree.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PairingHeap.java" afterPath="$PROJECT_DIR$/src/PairingHeap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tests.java" afterPath="$PROJECT_DIR$/src/Tests.java" />
     </list>
     <ignored path="Pairing Heap 2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +60,8 @@
       <file leaf-file-name="Tests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1287">
-              <caret line="414" column="6" selection-start-line="414" selection-start-column="6" selection-end-line="414" selection-end-column="6" />
+            <state relative-caret-position="429">
+              <caret line="184" column="84" selection-start-line="184" selection-start-column="84" selection-end-line="184" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,21 +69,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+            <state relative-caret-position="614">
+              <caret line="42" column="114" selection-start-line="42" selection-start-column="114" selection-end-line="42" selection-end-column="114" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PairingHeap.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PairingHeap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PairingHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+            <state relative-caret-position="2448">
+              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -110,13 +132,13 @@
         <option value="$PROJECT_DIR$/../../403 submit format/403ColeEvansSolutions/problems_done.txt" />
         <option value="$PROJECT_DIR$/src/Firestation.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/PairingHeap.java" />
         <option value="$PROJECT_DIR$/src/Node.java" />
         <option value="$PROJECT_DIR$/src/SimpleIntComparator.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Tests.java" />
         <option value="$PROJECT_DIR$/src/README rile" />
+        <option value="$PROJECT_DIR$/src/Tests.java" />
         <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/src/PairingHeap.java" />
       </list>
     </option>
   </component>
@@ -649,12 +671,12 @@
       <workItem from="1460675051933" duration="42000" />
       <workItem from="1460675186085" duration="52000" />
       <workItem from="1460676065662" duration="6484000" />
-      <workItem from="1460684829074" duration="5091000" />
+      <workItem from="1460684829074" duration="8068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35676000" />
+    <option name="totallyTimeSpent" value="38653000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="10" width="3836" height="2064" extended-state="0" />
@@ -707,36 +729,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="35" column="67" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PairingHeap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="108" column="46" selection-start-line="108" selection-start-column="46" selection-end-line="108" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../403 submit format/403ColeEvansSolutions/UVa_1/UVa_374.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../403 submit format/403ColeEvansSolutions/UVa_1/UVa_10327.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../403 submit format/403ColeEvansSolutions/UVa_1/UVa_11995.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1042,16 +1034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1287">
-          <caret line="414" column="6" selection-start-line="414" selection-start-column="6" selection-end-line="414" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pairing Heap 2.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1060,18 +1042,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PairingHeap.java">
+    <entry file="file://$PROJECT_DIR$/src/Tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="429">
+          <caret line="184" column="84" selection-start-line="184" selection-start-column="84" selection-end-line="184" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        <state relative-caret-position="614">
+          <caret line="42" column="114" selection-start-line="42" selection-start-column="114" selection-end-line="42" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.265/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-145">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.697/PairingHeap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2079">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.174/SimpleIntComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="72" selection-start-line="8" selection-start-column="72" selection-end-line="8" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.463/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-891">
+          <caret line="15" column="120" selection-start-line="15" selection-start-column="120" selection-end-line="15" selection-end-column="120" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PairingHeap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
           <folding />
         </state>
       </provider>
