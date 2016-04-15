@@ -1,0 +1,81 @@
+******TEST 1: Basics and Corner Cases 
+min value int!!!!
+neg One Hundred Nintey One
+zero
+one
+two
+strange 2
+three
+four
+five
+six
+seven
+nine
+ten
+max value int!!!!
+max value int AGAIN!
+
+******TEST 2: Merging Two Heaps 
+-> Heap 1 data
+heap1node1  (val = 8)
+heap1node2  (val = 101)
+heap1node3  (val = MaxInt)
+-> Heap 2 data
+heap2node1  (val = -7)
+heap2node2  (val = 15)
+heap2node3  (val = 9999)
+Now repopulating the 2 heaps and will merge...
+heap2node1  (val = -7)
+heap1node1  (val = 8)
+heap2node2  (val = 15)
+heap1node2  (val = 101)
+heap2node3  (val = 9999)
+
+******TEST 3: Run against Java Built In Heap! 
+Built in heap value: -8
+Pairing heap value : -8
+Built in heap value: -16
+Pairing heap value : -16
+Built in heap value: -17
+Pairing heap value : -17
+Built in heap value: 0
+Pairing heap value : 0
+Built in heap value: 16
+Pairing heap value : 16
+Built in heap value: 89
+Pairing heap value : 89
+Built in heap value: 178
+Pairing heap value : 178
+Built in heap value: 1699
+Pairing heap value : 1699
+Built in heap value: 2147483647
+Pairing heap value : 2147483647
+
+******TEST 4: Stress test! 
+Built in heap value 0 : -2147425463
+Pairing heap value  0 : -2147425463
+Built in heap value 1 : -2147380572
+Pairing heap value  1 : -2147380572
+Built in heap value 2 : -2147328100
+Pairing heap value  2 : -2147328100
+Built in heap value 3 : -2147265137
+Pairing heap value  3 : -2147265137
+Built in heap value 4 : -2147051052
+Pairing heap value  4 : -2147051052
+Built in heap value 5 : -2147044930
+Pairing heap value  5 : -2147044930
+Built in heap value 6 : -2146708596
+Pairing heap value  6 : -2146708596
+Built in heap value 7 : -2146655896
+Pairing heap value  7 : -2146655896
+Built in heap value 8 : -2146615675
+Pairing heap value  8 : -2146615675
+Built in heap value 9 : -2146603578
+Pairing heap value  9 : -2146603578
+
+******TEST 5: Compare Running times! 
+The next two values below should also be equal.
+17292126
+17292126
+duration of built in:     14
+duration of Pairing Heap :25
